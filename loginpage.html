@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>form</title>
+	<style type="text/css">
+		.mdiv
+		{
+			height: 140vh;
+			width: 100%;
+			background-image:url(https://onlinegiftools.com/images/examples-onlinegiftools/drop-of-liquid.gif) ;
+			background-repeat: no-repeat;
+			background-size: cover;
+			position: fixed;
+			top: 0px;
+			left:0px ;
+		}
+		.lgnfrm
+		{
+			width: 250px;
+			height: 250px;
+			margin: 15% 35%;
+
+		}
+		input
+		{
+			width: 95%;
+			margin-top: 10px;
+			height: 20px;
+			background-color: transparent;
+			border: none;
+			border-bottom: 2px solid white;
+			color: white;
+			text-align: center;
+			font-weight: bolder;
+		}
+		input:focus
+		{
+			outline: none;
+		}
+		.head
+		{
+           color: white;   
+           letter-spacing: 4px;
+           font-size: 30px;
+           font-family: Elephant;
+           font-weight: bolder;
+		}
+		input[type="button"]
+		{
+			border: none;
+			background-color: white;
+			height: 50px;
+			color: black;
+			font-size: 20px;
+			border-radius: 10px;
+			margin-bottom: 10px;
+			transition-duration: 1s;
+		}
+		input[type="button"]:hover
+		{
+			background-color: transparent;
+			color: white;
+			border: 2px solid white;
+			transform: scale(1.1);
+			cursor: pointer;
+		}
+	a
+		{
+        text-decoration: none;
+        color: white;
+		}	
+	</style>
+</head>
+<body>
+   <div class="mdiv">
+   	<div class="lgnfrm" align="center">
+   		<form autocomplete="off">
+   			<h2 class="head">LOGIN</h2><br>
+   			<input type="text" name="username" placeholder="Username" class="ipl" id="usr">
+   		<input type="text" name="pwd" placeholder="Password" style="margin-bottom: 10px;" class="ipl" id="pass"><br>
+   		<span><a href="#">forget Password ?</a></span><br>
+   		<input type="button" name="lgn" value="LOGIN" onclick="validate()">
+   		<span><a href="#">CREATE ACCOUNT</a></span><br>
+   		</form>
+   		
+   	</div>
+   </div>
+   <script type="text/javascript">
+   	let usr1="something";
+   	let pass1="something123";
+   	function validate()
+   	{
+   		let usr2=document.getElementById("usr").value;
+   		let pass2=document.getElementById("pass").value;
+   		if((usr1===usr2)&&(pass1===pass2))
+   		{
+   			open('dumypage.html');
+   		}
+   		else
+   		{
+   			alert("wrong credential")
+   		}
+   	}
+   </script>
+</body>
+</html>
